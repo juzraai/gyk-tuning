@@ -96,7 +96,7 @@ function topic(doc) {
 		// alul válasz form!!! - előre beleírhatná, hogy "#1 vagyok", ha lát "Ez a te válaszod" szöveget :)
 		// később további lapokat betölti ahogy legörgetünk
 
-		var c = $("td.jobb_oldal a").get(1).attr('href');
+		var c = $("td.jobb_oldal a", doc).get(1).attr('href');
 		updateCat1(c, false);
 
 		var q = $('table.kerdes h1', doc).text();
