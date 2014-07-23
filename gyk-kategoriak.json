@@ -1,0 +1,1066 @@
+[
+	{
+		"href": "/altalad-megvalaszolt-kerdesek",
+		"text": "Válaszaim"
+	},
+	{
+		"href": "/kerdeseid",
+		"text": "Kérdéseim"
+	},
+	{
+		"href": "/figyelt-kerdeseid",
+		"text": "Figyelt kérdéseim"
+	},
+	{
+		"href": "/figyelt-kulcsszavak",
+		"text": "Figyelt kulcsszavak"
+	},
+	{
+		"href": "/allatok",
+		"text": "Állatok",
+		"sub": [
+			{
+				"href": "/allatok__allatvedelem",
+				"text": "Állatvédelem"
+			},
+			{
+				"href": "/allatok__halak-akvarisztika",
+				"text": "Halak, akvarisztika"
+			},
+			{
+				"href": "/allatok__haszonallatok",
+				"text": "Haszonállatok"
+			},
+			{
+				"href": "/allatok__hullok",
+				"text": "Hüllők"
+			},
+			{
+				"href": "/allatok__kisemlosok",
+				"text": "Kisemlősök"
+			},
+			{
+				"href": "/allatok__kutyak",
+				"text": "Kutyák"
+			},
+			{
+				"href": "/allatok__lovak",
+				"text": "Lovak"
+			},
+			{
+				"href": "/allatok__macskak",
+				"text": "Macskák"
+			},
+			{
+				"href": "/allatok__madarak",
+				"text": "Madarak"
+			},
+			{
+				"href": "/allatok__rovarok-izeltlabuak",
+				"text": "Rovarok, ízeltlábúak"
+			},
+			{
+				"href": "/allatok__vadallatok",
+				"text": "Vadállatok"
+			},
+			{
+				"href": "/allatok__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/csaladi-kapcsolatok",
+		"text": "Családi kapcsolatok",
+		"sub": [
+			{
+				"href": "/csaladi-kapcsolatok__anyos-apos",
+				"text": "Anyós, após"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__csaladfa",
+				"text": "Családfa"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__eljegyzes",
+				"text": "Eljegyzés"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__eskuvo",
+				"text": "Esküvő"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__hazassag",
+				"text": "Házasság"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__nagyszulok",
+				"text": "Nagyszülők"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__rokoni-kapcsolat",
+				"text": "Rokoni kapcsolat"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__szulo-gyermek-kapcsolat",
+				"text": "Szülő-gyermek kapcsolat"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__testveri-kapcsolat",
+				"text": "Testvéri kapcsolat"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__valas",
+				"text": "Válás"
+			},
+			{
+				"href": "/csaladi-kapcsolatok__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/egeszseg",
+		"text": "Egészség",
+		"sub": [
+			{
+				"href": "/egeszseg__allergiak",
+				"text": "Allergiák"
+			},
+			{
+				"href": "/egeszseg__altalanos-kozerzet",
+				"text": "Általános közérzet"
+			},
+			{
+				"href": "/egeszseg__alternativ-gyogyitas",
+				"text": "Alternatív gyógyítás"
+			},
+			{
+				"href": "/egeszseg__betegsegek",
+				"text": "Betegségek"
+			},
+			{
+				"href": "/egeszseg__bio-eletmod",
+				"text": "Bio életmód"
+			},
+			{
+				"href": "/egeszseg__dohanyzas",
+				"text": "Dohányzás"
+			},
+			{
+				"href": "/egeszseg__egeszsegugyi-ellatasok",
+				"text": "Egészségügyi ellátások"
+			},
+			{
+				"href": "/egeszseg__ferfiak-egeszsege",
+				"text": "Férfiak egészsége"
+			},
+			{
+				"href": "/egeszseg__fogak-szajapolas",
+				"text": "Fogak, szájápolás"
+			},
+			{
+				"href": "/egeszseg__immunrendszer-fertozesek",
+				"text": "Immunrendszer, fertőzések"
+			},
+			{
+				"href": "/egeszseg__mentalis-egeszseg",
+				"text": "Mentális egészség"
+			},
+			{
+				"href": "/egeszseg__nok-egeszsege",
+				"text": "Nők egészsége"
+			},
+			{
+				"href": "/egeszseg__serulesek-balesetek",
+				"text": "Sérülések, balesetek"
+			},
+			{
+				"href": "/egeszseg__szemproblemak",
+				"text": "Szemproblémák"
+			},
+			{
+				"href": "/egeszseg__taplalkozas",
+				"text": "Táplálkozás"
+			},
+			{
+				"href": "/egeszseg__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/elektronikus-eszkozok",
+		"text": "Elektronikus eszközök",
+		"sub": [
+			{
+				"href": "/elektronikus-eszkozok__fenykepezogepek-kamerak",
+				"text": "Fényképezőgépek, kamerák"
+			},
+			{
+				"href": "/elektronikus-eszkozok__gps-navigacio",
+				"text": "GPS, navigáció"
+			},
+			{
+				"href": "/elektronikus-eszkozok__haztartasi-gepek",
+				"text": "Háztartási gépek"
+			},
+			{
+				"href": "/elektronikus-eszkozok__mobiltelefonok",
+				"text": "Mobiltelefonok"
+			},
+			{
+				"href": "/elektronikus-eszkozok__szorakoztato-keszulekek",
+				"text": "Szórakoztató készülékek"
+			},
+			{
+				"href": "/elektronikus-eszkozok__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/emberek",
+		"text": "Emberek",
+		"sub": [
+			{
+				"href": "/emberek__baratok-baratsagok",
+				"text": "Barátok, barátságok"
+			},
+			{
+				"href": "/emberek__emberi-tulajdonsagok",
+				"text": "Emberi tulajdonságok"
+			},
+			{
+				"href": "/emberek__lakohely-szomszedok",
+				"text": "Lakóhely, szomszédok"
+			},
+			{
+				"href": "/emberek__magany-egyedullet",
+				"text": "Magány, egyedüllét"
+			},
+			{
+				"href": "/emberek__munkahely-kollegak",
+				"text": "Munkahely, kollégák"
+			},
+			{
+				"href": "/emberek__tanarok-iskolatarsak",
+				"text": "Tanárok, iskolatársak"
+			},
+			{
+				"href": "/emberek__tarsasagi-elet",
+				"text": "Társasági élet"
+			},
+			{
+				"href": "/emberek__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/etelek-italok",
+		"text": "Ételek, italok",
+		"sub": [
+			{
+				"href": "/etelek-italok__alkoholmentes-italok",
+				"text": "Alkoholmentes italok"
+			},
+			{
+				"href": "/etelek-italok__bor-sor-roviditalok",
+				"text": "Bor, sör, röviditalok"
+			},
+			{
+				"href": "/etelek-italok__elelmiszerboltok",
+				"text": "Élelmiszerboltok"
+			},
+			{
+				"href": "/etelek-italok__elelmiszerek",
+				"text": "Élelmiszerek"
+			},
+			{
+				"href": "/etelek-italok__konyhai-praktikak",
+				"text": "Konyhai praktikák"
+			},
+			{
+				"href": "/etelek-italok__nemzetek-etelei-italai",
+				"text": "Nemzetek ételei, italai"
+			},
+			{
+				"href": "/etelek-italok__sutes-fozes",
+				"text": "Sütés, főzés"
+			},
+			{
+				"href": "/etelek-italok__vegetarianizmus",
+				"text": "Vegetarianizmus"
+			},
+			{
+				"href": "/etelek-italok__vendeglatas-ettermek",
+				"text": "Vendéglátás, éttermek"
+			},
+			{
+				"href": "/etelek-italok__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/ezoteria",
+		"text": "Ezotéria",
+		"sub": [
+			{
+				"href": "/ezoteria__agykontroll",
+				"text": "Agykontroll"
+			},
+			{
+				"href": "/ezoteria__alomfejtes",
+				"text": "Álomfejtés"
+			},
+			{
+				"href": "/ezoteria__asztrologia-horoszkop",
+				"text": "Asztrológia, horoszkóp"
+			},
+			{
+				"href": "/ezoteria__feng-shui",
+				"text": "Feng-shui"
+			},
+			{
+				"href": "/ezoteria__joslas",
+				"text": "Jóslás"
+			},
+			{
+				"href": "/ezoteria__magia-okkultizmus",
+				"text": "Mágia, okkultizmus"
+			},
+			{
+				"href": "/ezoteria__parapszichologia",
+				"text": "Parapszichológia"
+			},
+			{
+				"href": "/ezoteria__reinkarnacio-es-karma",
+				"text": "Reinkarnáció és karma"
+			},
+			{
+				"href": "/ezoteria__termeszetfeletti-lenyek",
+				"text": "Természetfeletti lények"
+			},
+			{
+				"href": "/ezoteria__ufo-eszlelesek",
+				"text": "UFO észlelések"
+			},
+			{
+				"href": "/ezoteria__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/fogyokurak",
+		"text": "Fogyókúrák",
+		"sub": [
+			{
+				"href": "/fogyokurak__90-napos-dieta",
+				"text": "90 napos diéta"
+			},
+			{
+				"href": "/fogyokurak__atkins-dieta",
+				"text": "Atkins diéta"
+			},
+			{
+				"href": "/fogyokurak__dukan-dieta",
+				"text": "Dukan diéta"
+			},
+			{
+				"href": "/fogyokurak__fogyasztoszerek",
+				"text": "Fogyasztószerek"
+			},
+			{
+				"href": "/fogyokurak__kaloriaszamlalas",
+				"text": "Kalóriaszámlálás"
+			},
+			{
+				"href": "/fogyokurak__paleo-dieta",
+				"text": "Paleo diéta"
+			},
+			{
+				"href": "/fogyokurak__szenhidratszegeny-dieta",
+				"text": "Szénhidrátszegény diéta"
+			},
+			{
+				"href": "/fogyokurak__update-modszer",
+				"text": "Update módszer"
+			},
+			{
+				"href": "/fogyokurak__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/gyerekvallalas-neveles",
+		"text": "Gyerekvállalás, nevelés",
+		"sub": [
+			{
+				"href": "/gyerekvallalas-neveles__altatas",
+				"text": "Altatás"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__babak",
+				"text": "Babák"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__babakocsik-hordozok",
+				"text": "Babakocsik, hordozók"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__babaruhak-gyermekruhak",
+				"text": "Babaruhák, gyermekruhák"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__babaszoba-gyerekszoba",
+				"text": "Babaszoba, gyerekszoba"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__betegsegek-oltasok",
+				"text": "Betegségek, oltások"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__bolcsodek",
+				"text": "Bölcsődék"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__csaladi-potlek",
+				"text": "Családi pótlék"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__etelek-bevezetese",
+				"text": "Ételek bevezetése"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__fogzas",
+				"text": "Fogzás"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__gyas-gyes-gyed-gyet",
+				"text": "GYÁS, GYES, GYED, GYET"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__iskolak",
+				"text": "Iskolák"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__kamaszok",
+				"text": "Kamaszok"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__kisgyerekek",
+				"text": "Kisgyerekek"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__ovodak",
+				"text": "Óvodák"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__orokbeadas-orokbefogadas",
+				"text": "Örökbeadás, örökbefogadás"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__problemas-gyerekek",
+				"text": "Problémás gyerekek"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__szobatisztasag",
+				"text": "Szobatisztaság"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__szoptatas",
+				"text": "Szoptatás"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__szules",
+				"text": "Szülés"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__tapszeres-taplalas",
+				"text": "Tápszeres táplálás"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__teherbeeses",
+				"text": "Teherbeesés"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__teherbeesesi-problemak",
+				"text": "Teherbeesési problémák"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__terhesgondozas",
+				"text": "Terhesgondozás"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__terhesseg",
+				"text": "Terhesség"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__terhesseg-megszakitasa",
+				"text": "Terhesség megszakítása"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__veteles-missed-ab",
+				"text": "Vetélés, missed ab"
+			},
+			{
+				"href": "/gyerekvallalas-neveles__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/kozlekedes",
+		"text": "Közlekedés",
+		"sub": [
+			{
+				"href": "/kozlekedes__autok-motorok",
+				"text": "Autók, motorok"
+			},
+			{
+				"href": "/kozlekedes__biztositas-papirmunka",
+				"text": "Biztosítás, papírmunka"
+			},
+			{
+				"href": "/kozlekedes__kozlekedesbiztonsag",
+				"text": "Közlekedésbiztonság"
+			},
+			{
+				"href": "/kozlekedes__tomegkozlekedes",
+				"text": "Tömegközlekedés"
+			},
+			{
+				"href": "/kozlekedes__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			},
+			{
+				"href": "/kozoktatas-tanfolyamok",
+				"text": "Közoktatás, tanfolyamok"
+			},
+			{
+				"href": "/kozoktatas-tanfolyamok__hazifeladat-kerdesek",
+				"text": "Házifeladat kérdések"
+			},
+			{
+				"href": "/kozoktatas-tanfolyamok__magyar-iskolak",
+				"text": "Magyar iskolák"
+			},
+			{
+				"href": "/kozoktatas-tanfolyamok__nyelvtanulas",
+				"text": "Nyelvtanulás"
+			},
+			{
+				"href": "/kozoktatas-tanfolyamok__specialis-tanfolyamok",
+				"text": "Speciális tanfolyamok"
+			},
+			{
+				"href": "/kozoktatas-tanfolyamok__tanulas-kulfoldon",
+				"text": "Tanulás külföldön"
+			},
+			{
+				"href": "/kozoktatas-tanfolyamok__tanulasi-lehetosegek",
+				"text": "Tanulási lehetőségek"
+			},
+			{
+				"href": "/kozoktatas-tanfolyamok__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			},
+			{
+				"href": "/kultura-es-kozosseg",
+				"text": "Kultúra és közösség"
+			},
+			{
+				"href": "/kultura-es-kozosseg__muveszetek",
+				"text": "Művészetek"
+			},
+			{
+				"href": "/kultura-es-kozosseg__nepszokasok",
+				"text": "Népszokások"
+			},
+			{
+				"href": "/kultura-es-kozosseg__nyelvek",
+				"text": "Nyelvek"
+			},
+			{
+				"href": "/kultura-es-kozosseg__szokasok-etikett",
+				"text": "Szokások, etikett"
+			},
+			{
+				"href": "/kultura-es-kozosseg__vallas",
+				"text": "Vallás"
+			},
+			{
+				"href": "/kultura-es-kozosseg__vallaskritika",
+				"text": "Valláskritika"
+			},
+			{
+				"href": "/kultura-es-kozosseg__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/otthon",
+		"text": "Otthon",
+		"sub": [
+			{
+				"href": "/otthon__alberlet",
+				"text": "Albérlet"
+			},
+			{
+				"href": "/otthon__barkacsolas",
+				"text": "Barkácsolás"
+			},
+			{
+				"href": "/otthon__epitkezes",
+				"text": "Építkezés"
+			},
+			{
+				"href": "/otthon__felujitas",
+				"text": "Felújítás"
+			},
+			{
+				"href": "/otthon__hazimunka",
+				"text": "Házimunka"
+			},
+			{
+				"href": "/otthon__ingatlan-vasarlas-eladas",
+				"text": "Ingatlan vásárlás, eladás"
+			},
+			{
+				"href": "/otthon__kartevok",
+				"text": "Kártevők"
+			},
+			{
+				"href": "/otthon__kert",
+				"text": "Kert"
+			},
+			{
+				"href": "/otthon__lakberendezes",
+				"text": "Lakberendezés"
+			},
+			{
+				"href": "/otthon__rezsi",
+				"text": "Rezsi"
+			},
+			{
+				"href": "/otthon__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/politika",
+		"text": "Politika",
+		"sub": [
+			{
+				"href": "/politika__hadsereg-hadvezetes",
+				"text": "Hadsereg, hadvezetés"
+			},
+			{
+				"href": "/politika__kulfoldi-politika",
+				"text": "Külföldi politika"
+			},
+			{
+				"href": "/politika__magyar-politika",
+				"text": "Magyar politika"
+			},
+			{
+				"href": "/politika__partok-kormanyzas",
+				"text": "Pártok, kormányzás"
+			},
+			{
+				"href": "/politika__rendorseg",
+				"text": "Rendőrség"
+			},
+			{
+				"href": "/politika__torvenyek-jog",
+				"text": "Törvények, jog"
+			},
+			{
+				"href": "/politika__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/sport-mozgas",
+		"text": "Sport, mozgás",
+		"sub": [
+			{
+				"href": "/sport-mozgas__extrem-sportok",
+				"text": "Extrém sportok"
+			},
+			{
+				"href": "/sport-mozgas__kerekparozas",
+				"text": "Kerékpározás"
+			},
+			{
+				"href": "/sport-mozgas__labdajatekok",
+				"text": "Labdajátékok"
+			},
+			{
+				"href": "/sport-mozgas__teli-sportok",
+				"text": "Téli sportok"
+			},
+			{
+				"href": "/sport-mozgas__testepites",
+				"text": "Testépítés"
+			},
+			{
+				"href": "/sport-mozgas__versenyek-olimpiak",
+				"text": "Versenyek, olimpiák"
+			},
+			{
+				"href": "/sport-mozgas__vizi-sportok",
+				"text": "Vizi sportok"
+			},
+			{
+				"href": "/sport-mozgas__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/szamitastechnika",
+		"text": "Számítástechnika",
+		"sub": [
+			{
+				"href": "/szamitastechnika__biztonsag",
+				"text": "Biztonság"
+			},
+			{
+				"href": "/szamitastechnika__hardverek",
+				"text": "Hardverek"
+			},
+			{
+				"href": "/szamitastechnika__internet",
+				"text": "Internet"
+			},
+			{
+				"href": "/szamitastechnika__programok",
+				"text": "Programok"
+			},
+			{
+				"href": "/szamitastechnika__programozas",
+				"text": "Programozás"
+			},
+			{
+				"href": "/szamitastechnika__weblapkeszites",
+				"text": "Weblapkészítés"
+			},
+			{
+				"href": "/szamitastechnika__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/szepseg-es-divat",
+		"text": "Szépség és divat",
+		"sub": [
+			{
+				"href": "/szepseg-es-divat__bor-es-hajapolas",
+				"text": "Bőr- és hajápolás"
+			},
+			{
+				"href": "/szepseg-es-divat__modellkedes",
+				"text": "Modellkedés"
+			},
+			{
+				"href": "/szepseg-es-divat__oltozkodes",
+				"text": "Öltözködés"
+			},
+			{
+				"href": "/szepseg-es-divat__plasztikai-mutetek",
+				"text": "Plasztikai műtétek"
+			},
+			{
+				"href": "/szepseg-es-divat__smink-es-kiegeszitok",
+				"text": "Smink és kiegészítők"
+			},
+			{
+				"href": "/szepseg-es-divat__tetovalas",
+				"text": "Tetoválás"
+			},
+			{
+				"href": "/szepseg-es-divat__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/szerelem-szex",
+		"text": "Szerelem, szex",
+		"sub": [
+			{
+				"href": "/szerelem-szex__fogamzasgatlas",
+				"text": "Fogamzásgátlás"
+			},
+			{
+				"href": "/szerelem-szex__ismerkedes",
+				"text": "Ismerkedés"
+			},
+			{
+				"href": "/szerelem-szex__parkapcsolatok",
+				"text": "Párkapcsolatok"
+			},
+			{
+				"href": "/szerelem-szex__randizas",
+				"text": "Randizás"
+			},
+			{
+				"href": "/szerelem-szex__szexualitas",
+				"text": "Szexualitás"
+			},
+			{
+				"href": "/szerelem-szex__szuzesseg",
+				"text": "Szüzesség"
+			},
+			{
+				"href": "/szerelem-szex__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/szorakozas",
+		"text": "Szórakozás",
+		"sub": [
+			{
+				"href": "/szorakozas__filmek-sorozatok",
+				"text": "Filmek, sorozatok"
+			},
+			{
+				"href": "/szorakozas__jatekok",
+				"text": "Játékok"
+			},
+			{
+				"href": "/szorakozas__konyvek",
+				"text": "Könyvek"
+			},
+			{
+				"href": "/szorakozas__sztarok-bulvar",
+				"text": "Sztárok, bulvár"
+			},
+			{
+				"href": "/szorakozas__tevek-tevemusorok",
+				"text": "Tévék, tévéműsorok"
+			},
+			{
+				"href": "/szorakozas__zene",
+				"text": "Zene"
+			},
+			{
+				"href": "/szorakozas__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/tudomanyok",
+		"text": "Tudományok",
+		"sub": [
+			{
+				"href": "/tudomanyok__alkalmazott-tudomanyok",
+				"text": "Alkalmazott tudományok"
+			},
+			{
+				"href": "/tudomanyok__helyesiras",
+				"text": "Helyesírás"
+			},
+			{
+				"href": "/tudomanyok__tarsadalomtudomanyok-es-bolcseszet",
+				"text": "Társadalomtudományok és bölcsészet"
+			},
+			{
+				"href": "/tudomanyok__termeszettudomanyok",
+				"text": "Természettudományok"
+			},
+			{
+				"href": "/tudomanyok__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/utazas",
+		"text": "Utazás",
+		"sub": [
+			{
+				"href": "/utazas__afrika",
+				"text": "Afrika"
+			},
+			{
+				"href": "/utazas__ausztralia",
+				"text": "Ausztrália"
+			},
+			{
+				"href": "/utazas__azsia",
+				"text": "Ázsia"
+			},
+			{
+				"href": "/utazas__biztositasok",
+				"text": "Biztosítások"
+			},
+			{
+				"href": "/utazas__del-amerika",
+				"text": "Dél-Amerika"
+			},
+			{
+				"href": "/utazas__elokeszuletek",
+				"text": "Előkészületek"
+			},
+			{
+				"href": "/utazas__eszak-amerika",
+				"text": "Észak-Amerika"
+			},
+			{
+				"href": "/utazas__europa",
+				"text": "Európa"
+			},
+			{
+				"href": "/utazas__magyarorszag",
+				"text": "Magyarország"
+			},
+			{
+				"href": "/utazas__repules-repulojegyek",
+				"text": "Repülés, repülőjegyek"
+			},
+			{
+				"href": "/utazas__szallasok",
+				"text": "Szállások"
+			},
+			{
+				"href": "/utazas__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/unnepek",
+		"text": "Ünnepek",
+		"sub": [
+			{
+				"href": "/unnepek__ajandekozas",
+				"text": "Ajándékozás"
+			},
+			{
+				"href": "/unnepek__anyak-napja",
+				"text": "Anyák napja"
+			},
+			{
+				"href": "/unnepek__ballagas",
+				"text": "Ballagás"
+			},
+			{
+				"href": "/unnepek__evfordulo",
+				"text": "Évforduló"
+			},
+			{
+				"href": "/unnepek__farsang",
+				"text": "Farsang"
+			},
+			{
+				"href": "/unnepek__gyereknap",
+				"text": "Gyereknap"
+			},
+			{
+				"href": "/unnepek__husvet",
+				"text": "Húsvét"
+			},
+			{
+				"href": "/unnepek__karacsony",
+				"text": "Karácsony"
+			},
+			{
+				"href": "/unnepek__mikulas",
+				"text": "Mikulás"
+			},
+			{
+				"href": "/unnepek__nevnap",
+				"text": "Névnap"
+			},
+			{
+				"href": "/unnepek__nonap",
+				"text": "Nőnap"
+			},
+			{
+				"href": "/unnepek__punkosd",
+				"text": "Pünkösd"
+			},
+			{
+				"href": "/unnepek__szilveszter-ujev",
+				"text": "Szilveszter, Újév"
+			},
+			{
+				"href": "/unnepek__szuletesnap",
+				"text": "Születésnap"
+			},
+			{
+				"href": "/unnepek__valentin-nap",
+				"text": "Valentin nap"
+			},
+			{
+				"href": "/unnepek__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/uzlet-es-penzugyek",
+		"text": "Üzlet és pénzügyek",
+		"sub": [
+			{
+				"href": "/uzlet-es-penzugyek__adozas-konyveles",
+				"text": "Adózás, könyvelés"
+			},
+			{
+				"href": "/uzlet-es-penzugyek__banki-ugyek-kamat-hitel",
+				"text": "Banki ügyek, kamat, hitel"
+			},
+			{
+				"href": "/uzlet-es-penzugyek__biztositasok",
+				"text": "Biztosítások"
+			},
+			{
+				"href": "/uzlet-es-penzugyek__karrier-fizetes",
+				"text": "Karrier, fizetés"
+			},
+			{
+				"href": "/uzlet-es-penzugyek__sajat-vallalkozas",
+				"text": "Saját vállalkozás"
+			},
+			{
+				"href": "/uzlet-es-penzugyek__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/egyeb-kerdesek",
+		"text": "Egyéb kérdések",
+		"sub": [
+			{
+				"href": "/egyeb-kerdesek__gyik",
+				"text": "GYIK"
+			},
+			{
+				"href": "/egyeb-kerdesek__humor",
+				"text": "Humor"
+			},
+			{
+				"href": "/egyeb-kerdesek__onismereti-kerdesek",
+				"text": "Önismereti kérdések"
+			},
+			{
+				"href": "/egyeb-kerdesek__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	}
+]
