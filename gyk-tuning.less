@@ -1,34 +1,47 @@
-/* reset */
+/* colors */
+@blue        : #09F;
+@lighter-blue: #0CF;
 
-* {
-	margin: 0;
-	padding: 0;
-}
+/* variables */
+@bg-color        : #000;
+
+@font            : Segoe UI,Arial,sans-serif;
+@text-color      : #999;
+@text-size       : 14px;
+
+@link-color      : @blue;
+@link-hover-color: @lighter-blue;
+
+
+
+/* reset */
+* {	margin: 0; padding: 0; }
 
 /* global formatting */
 
-a, a:active, a:visited {
+a,
+a:active,
+a:visited {
+	color          : @link-color;
 	text-decoration: none;
-	color: #09F;
 }
-
 a:hover {
-	color: #0CF;
+	color: @link-hover-color;
 	text-decoration: none;
 }
 
 body {
+	background-color: @bg-color;
+	color: @text-color;
+	font-family: @font;
+	font-size: @text-size;
 	margin: 0 0 50px;
-	/*font-family: Georgia, "Times New Roman", Times, serif;*/
-	font-family: Segoe UI,Arial,sans-serif;
-	color: #999;
-	background-color: #000;
-	font-size: 14px;
 }
 
 html {
 	position: relative;
 	min-height: 100%;
+	/* sticky footer */
 }
 
 li {
@@ -36,8 +49,8 @@ li {
 }
 
 select {
-	border: 1px solid #666;
 	background-color: #333;
+	border: 1px solid #666;
 	border-radius: 4px;
 	color: #CCC;
 	padding: 2px;
@@ -49,40 +62,6 @@ select:hover, select:focus {
 	border: 1px solid #999;
 	color: #FFF;
 }
-
-/* checkboxes */
-
-input[type=checkbox].css-checkbox {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	height:1px;
-	width:1px;
-	margin:-1px;
-	padding:0;
-	border:0;
-}
-
-input[type=checkbox].css-checkbox + label.css-label {
-	padding-left:20px;
-	height:15px;
-	display:inline-block;
-	line-height:15px;
-	background-repeat:no-repeat;
-	background-position: 0 0;
-	font-size:15px;
-	vertical-align:middle;
-	cursor:pointer;
-}
-
-input[type=checkbox].css-checkbox:checked + label.css-label {
-	background-position: 0 -15px;
-}
-
-.css-label{
-	background-image:url(https://dl.dropboxusercontent.com/u/36364364/scripts/gyk-tuning/dark-check-cyan.png);
-}
-
 
 /* horizontal nav */
 
@@ -118,15 +97,11 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 }
 
 .bottom-border {
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #333;
+	border-bottom: 1px solid #333;
 }
 
 .top-border {
-	border-top-width: 1px;
-	border-top-style: solid;
-	border-top-color: #333;
+	border-top: 1px solid #333;
 }
 
 .float-right {
@@ -167,20 +142,20 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 
 /* topic list */
 
-#qlist {
+#topic-list {
 	width: 900px;
 	margin: 0 auto;
 	border-spacing: 0px 10px;
 	border-collapse: separate;
 }
-#qlist tr:hover {
+#topic-list tr:hover {
 	color: #CCC;
 }
-#qlist tr td {
+#topic-list tr td {
 	/*padding: 10px;*/
 	white-space: nowrap;
 }
-#qlist tr th {
+#topic-list tr th {
 	background-color: #06A;
 	padding: 0px;
 	color: white;
@@ -189,15 +164,35 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 	width: 40px;
 	height: 40px;
 }
-#qlist tr:hover th {
+#topic-list tr:hover th {
 	background-color: #09C;
 }
-#qlist tr td.cat, #qlist tr td.topic {
+#topic-list tr td.cat, #topic-list tr td.topic {
 	padding: 0px 10px;
 }
-#qlist tr td.topic {
+#topic-list tr td.topic {
 	white-space: normal;
 }
-#qlist tr td.time {
+#topic-list tr td.time {
 	text-align: right;
+}
+
+/* topic page */
+
+.field { font-weight: bold; }
+.value { font-weight: normal; }
+
+#question {
+	width: 900px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #333;
+	margin-bottom: 20px;
+}
+#question h1 {
+	color:#CCC;
+	padding: 5px 20px;
+}
+#question .description {
+	padding: 5px 20px;
 }

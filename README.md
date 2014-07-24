@@ -27,15 +27,22 @@ Ez egy felhasználói szkript, amit bőngészőbővítményként lehet használn
 
 ## Mit tud?
 
+Egyelőre nem sok mindent, de a cucc **fejlesztés alatt** van! :)
+
+### A GYK funkcióiból
+
 * lecseréli az oldschool design-t, az én sötét felületemre, ami nem égeti ki a szemed, ha éjjel is a topikokat bújod
 * a menü fent és lent foglal helyet, az alsó menü kiegészül a moderátor email címével
 * dinamikusan (AJAX) tölti be a tartalmakat, miközben magát az oldalt nem tölti újra és a menü is a helyén marad - szép és gyors
-* az összes kategória és alkategória elérhető a menüből, akárhol is vagy + egyúttal ezek a vezérlők azt is mutatják, éppen milyen listát nézel
 * a topik lista design-ját részben a [prog.hu](http://prog.hu) ihlette, az első oszlopban kiemelve látható a válaszok száma
 * meg tudja jeleníteni topik listákat, egyelőre lapozólinkek és rendezés nélkül
+* működnek a kategória linkek mindenhonnan
+* megjeleníti a kérdéseket (válaszokat még nem)
 
-Egyelőre ennyi, de a cucc **fejlesztés alatt** van! :)
+### Plusz funkciók
 
+* az összes kategória és alkategória elérhető a menüből, akárhol is vagy + egyúttal ezek a vezérlők azt is mutatják, éppen milyen listát nézel
+* a topikok megjelenítésekor, ha ismert a kérdező nick-je, akkor megjelenít Google keresési linkeket a kérdező összes kérdéséhez és válaszához (pl. `site:gyakorikerdesek.hu "xyz nevű felhasználó kérdése"`)
 
 
 ## Mit fog tudni még?
@@ -46,6 +53,7 @@ Egyelőre ennyi, de a cucc **fejlesztés alatt** van! :)
 * topik listák rendezése (ahol elérhető)
 * kereső
 * bejelentkezés
+* privát üzik kezelése
 * az összes GYK aloldal (toplista, bannerek, beállítások)
 * az összes GYK funkció (válasz szavazás, kérdés jelentés, eltüntetés, feliratkozás, kulcsszóra feliratkozás, stb.)
 
