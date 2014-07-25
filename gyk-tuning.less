@@ -1,47 +1,106 @@
-/* colors */
-@blue        : #09F;
-@lighter-blue: #0CF;
-
-/* variables */
-@bg-color        : #000;
-
-@font            : Segoe UI,Arial,sans-serif;
-@text-color      : #999;
-@text-size       : 14px;
-
-@link-color      : @blue;
-@link-hover-color: @lighter-blue;
+/* ====================================
+	juzraai: GyakoriKérdések UI v2.0
+=====================================*/
 
 
+/*
+ 	Variables
+*/
 
-/* reset */
-* {	margin: 0; padding: 0; }
+@background-color: #000;
+@border-color: #333;
+@colored-cell-background-color: #06A;
+@colored-cell-background-color-hover: #09C;
+@colored-cell-text-color: #FFF;
+@control-background-color: #333;
+@control-border-color: #666;
+@control-border-color-hover: #999;
+@control-text-color: #CCC;
+@control-text-color-hover: #FFF;
+@font: Segoe UI, Arial, sans-serif;
+@link-color: @blue;
+@link-color-hover: @lighter-blue;
+@text-color: #999;
+@text-color-hover: #CCC;
+@text-size: 14px;
+@question-text-color: #CCC;
 
-/* global formatting */
+
+/*
+	Colors
+*/
+
+@blue: #09F;
+@lighter-blue: 0CF;
+
+
+/*
+	Reset
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+	General formatters
+*/
+
+.bold {
+	font-weight: bold;
+}
+
+.not-bold {
+	font-weight: normal;
+}
+
+.border-on(@where; @color: @border-color) {
+	border-@{where}: 1px solid @color;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+
+
+
+/*
+	Tags formatting
+*/
 
 a,
 a:active,
 a:visited {
-	color          : @link-color;
+	color: @link-color;
 	text-decoration: none;
-}
-a:hover {
-	color: @link-hover-color;
-	text-decoration: none;
+	&:hover {
+		color: @link-color-hover;
+	}
 }
 
 body {
-	background-color: @bg-color;
+	background-color: @background-color;
 	color: @text-color;
 	font-family: @font;
 	font-size: @text-size;
-	margin: 0 0 50px;
 }
 
 html {
-	position: relative;
 	min-height: 100%;
+	position: relative;
 	/* sticky footer */
+}
+
+input[type="checkbox"] {
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
 }
 
 li {
@@ -49,81 +108,33 @@ li {
 }
 
 select {
-	background-color: #333;
-	border: 1px solid #666;
+	background-color: @control-background-color;
+	border: 1px solid @control-border-color;
 	border-radius: 4px;
-	color: #CCC;
+	color: @control-text-color;
 	padding: 2px;
-	margin-left: 16px;
-	margin-right: 16px;
+
+	&:hover,
+	&:focus {
+		border: 1px solid @control-border-color-hover;
+		color: @control-text-color-hover;
+	}
 }
 
-select:hover, select:focus {
-	border: 1px solid #999;
-	color: #FFF;
+
+/*
+	Layout
+*/
+
+body {
+	margin: 88px 0 44px 0;
 }
 
-/* horizontal nav */
-
-.horizontal-nav {
-	padding: 0px;
-	padding: 12px;
-	text-align: center;
-}
-
-.horizontal-nav ul {
-	display: inline;
-}
-
-.horizontal-nav ul li {
-	display: inline-block;
-	border-right-style: solid;
-	border-right-width: 1px;
-	border-right-color: #333;
-
-	padding-right: 10px;
-
-	padding-left: 10px;
-}
-
-.horizontal-nav ul li:last-child {
-	border: none;
-}
-
-/* general formatters */
-
-.bold {
-	font-weight: bold;
-}
-
-.bottom-border {
-	border-bottom: 1px solid #333;
-}
-
-.top-border {
-	border-top: 1px solid #333;
-}
-
-.float-right {
-	float: right;
-}
-
-.float-left {
-	float: left;
-}
-
-/* layout */
-
-#catnav {
-	margin-top: 2px;
-	padding-top: 16px;
-	padding-bottom: 16px;
-}
-
-#footer {
-	position: absolute;
+#header {
+	background-color: @background-color;
 	left: 0;
-	bottom: 0;
+	position: fixed;
+	top: 0;
 	width: 100%;
 }
 
@@ -132,67 +143,140 @@ select:hover, select:focus {
 	padding-bottom: 16px;
 }
 
-#noans {
-	margin-right: 5px;
+#footer {
+	background-color: @background-color;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
 }
 
-/* initialization */
 
-#cat1block { display: none; }
+/*
+	Navbars
+*/
 
-/* topic list */
+#header nav,
+#footer nav {
+	padding: 0px;
+	padding: 12px;
+	text-align: center;
+
+	select {
+		margin-top: -5px;
+
+		&:first-child {
+			margin-right: 10px;
+		}
+
+		&:last-child {
+			margin-left: 10px;
+		}
+	}
+
+	ul {
+		display: inline;
+
+		li {
+				.border-on(right);
+				display: inline-block;
+
+				padding-right: 10px;
+				padding-left: 10px;
+
+				&:last-child {
+					border: none;
+				}
+		}
+	}
+}
+
+#header nav {
+	.border-on(bottom);
+}
+
+#footer nav {
+	.border-on(top);
+}
+
+#cat1block {
+	display: none;
+}
+
+/*
+	Page: topic list
+*/
 
 #topic-list {
 	width: 900px;
 	margin: 0 auto;
 	border-spacing: 0px 10px;
 	border-collapse: separate;
-}
-#topic-list tr:hover {
-	color: #CCC;
-}
-#topic-list tr td {
-	/*padding: 10px;*/
-	white-space: nowrap;
-}
-#topic-list tr th {
-	background-color: #06A;
-	padding: 0px;
-	color: white;
-	font-size: 16px;
-	text-align: center;
-	width: 40px;
-	height: 40px;
-}
-#topic-list tr:hover th {
-	background-color: #09C;
-}
-#topic-list tr td.cat, #topic-list tr td.topic {
-	padding: 0px 10px;
-}
-#topic-list tr td.topic {
-	white-space: normal;
-}
-#topic-list tr td.time {
-	text-align: right;
+
+	tr {
+
+		&:hover {
+			color: @text-color-hover;
+
+			th {
+				background-color: @colored-cell-background-color-hover;
+			}
+		}
+
+		th {
+			background-color: @colored-cell-background-color;
+			color: @colored-cell-text-color;
+			font-size: 16px;
+			height: 40px;
+			padding: 0px;
+			text-align: center;
+			width: 40px;
+		}
+
+		td {
+			white-space: nowrap;
+
+			&.cat,
+			&.topic {
+				padding: 0px 10px;
+			}
+
+			&.topic {
+				white-space: normal;
+			}
+
+			&.time {
+				text-align: right;
+			}
+		}
+	}
 }
 
-/* topic page */
 
-.field { font-weight: bold; }
-.value { font-weight: normal; }
+/*
+	Page: topic
+*/
+
+.field {
+	.bold;
+}
+
+.value {
+	.not-bold;
+}
 
 #question {
-	width: 900px;
-	margin: 0 auto;
+	.border-on(bottom);
+	margin: 0px auto 20px auto;
 	padding-bottom: 10px;
-	border-bottom: 1px solid #333;
-	margin-bottom: 20px;
-}
-#question h1 {
-	color:#CCC;
-	padding: 5px 20px;
-}
-#question .description {
-	padding: 5px 20px;
+	width: 900px;
+
+	h1 {
+		color: @question-text-color;
+		padding: 5px 20px;
+	}
+
+	#description {
+		padding: 5px 20px;
+	}
 }
