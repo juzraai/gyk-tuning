@@ -4,6 +4,10 @@ This is an UserScript for improving a Hungarian Q&A site's UI, so the readme wil
 
 # GyakoriKérdések UI v2.0 by juzraai
 
+<img hspace="10" src="http://img.shields.io/badge/fejleszt%C3%A9s-alatt%20%3A%29-orange.svg" />
+<img hspace="10" src="http://img.shields.io/badge/chrome-m%C5%B1k%C3%B6dik-brightgreen.svg" />
+<img hspace="10" src="http://img.shields.io/badge/firefox-hib%C3%A1k-red.svg" />
+
 **Tartalom**
 
 * [Mi is ez?](#mi-is-ez)
@@ -11,9 +15,9 @@ This is an UserScript for improving a Hungarian Q&A site's UI, so the readme wil
 * [Mit fog tudni még?](#mit-fog-tudni-m%C3%A9g)
 * [Hogyan telepítsd?](#hogyan-telep%C3%ADtsd)
 * [Hogyan működik?](#hogyan-m%C5%B1k%C3%B6dik)
-* [Hogyan törölhetem?](#hogyan-t%C3%B6r%C3%B6lhetem)
-* [Milyen környezetben teszteltem?](#milyen-k%C3%B6rnyezetben-teszteltem)
+* [Hogyan törölheted?](#hogyan-t%C3%B6r%C3%B6lheted)
 * [Fejlesztőknek!](#fejleszt%C5%91knek)
+* [Észrevételek](#%C3%89szrev%C3%A9telek)
 
 ---
 
@@ -43,20 +47,22 @@ Egyelőre nem sok mindent, de a cucc **fejlesztés alatt** van! :)
 
 * az összes kategória és alkategória elérhető a menüből, akárhol is vagy + egyúttal ezek a vezérlők azt is mutatják, éppen milyen listát nézel
 * a topikok megjelenítésekor, ha ismert a kérdező/válaszoló nick-je, akkor megjelenít Google keresési linkeket az illető összes kérdéséhez és válaszához (pl. `site:gyakorikerdesek.hu "xyz nevű felhasználó kérdése"`)
-* színezi a válaszokat az írójuk szerint: kérdező (zöld), te (kék), mindenki más (szürke)
+* színezi a válaszokat az írójuk szerint: kérdező (zöld), saját válaszok (kék), mindenki más (szürke)
 
 
 ## Mit fog tudni még?
 
 ### A GYK funkcióiból
 
-* lapozólinkek a topik listák felett
+* topik és válasz listák lapozásának kezelése
 * topik listák rendezése (ahol elérhető)
 * kereső
 * bejelentkezés
 * privát üzik kezelése
 * az összes GYK aloldal (toplista, bannerek, beállítások)
 * az összes GYK funkció (válasz szavazás, kérdés jelentés, eltüntetés, feliratkozás, kulcsszóra feliratkozás, stb.)
+* böngésző állapot frissítése (URL, ablak fejléc, előzmények)
+* elérhetőség a teljes GYK oldalról, a kurrens URL alapján dolgozza fel a lapot
 
 ### Saját tuning ötletek
 
@@ -72,27 +78,18 @@ Egyelőre nem sok mindent, de a cucc **fejlesztés alatt** van! :)
 
 Ez egy ún. UserScript, vagyis felhasználói szkript, melyet Firefox böngésző esetén a *GreaseMonkey* bővítmény, Chrome esetén pedig a *TamperMonkey* fog tudni működésre bírni.
 
-### Telepítés Chrome esetén
+Telepítés lépései:
 
-1. Telepítsd a [TamperMonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) nevű bővítményt
-2. A böngésző jobb felső sarkában kattints a TM ikonjára
-3. A megjelenő menüből válaszd az *Add a new script...* opciót
-4. A megnyíló oldalon az *Update URL* mezőbe illeszd be ezt a linket:
+1. Navigálj az alábbi címre:
 
 	`https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.user.js`
 
-5. Kattints a mentés ikonra (flopi lemezt ábrázol, balról a 2. gomb)
-6. Ekkor megjelenik a telepített felhasználói szkriptek listája és benne egy *My fancy new userscript* nevű szkript
-7. Pipáld be a sor elején a jelölőnégyzetet
-8. A fent megjelenő lenyíló listában válaszd a *Trigger an update* opciót
-9. Kattins mellette a *Start* gombra
-10. Ha minden OK, akkor a listában egy fekete színű "0 m" fogja jelezni, hogy 0 perce (azaz most) frissítetted a szkriptet, ami azt jelenti, hogy a gépeden van a legfrissebb verzió. Ha piros szöveg jelenik meg, akkor nem történt meg a frissítés, talán már a legfrissebb verziód volt, vagy valami hiba lépett fel.
+2. A megnyíló ablakban/lapon válaszd a Telepítés/Install lehetőséget
 
-A TM időnként frissíteni fogja a szkripteket, de a 7.-9. lépéssel te is bármikor megteheted.
+A GM/TM automatikusan frissíteni fogja a szkriptet bizonyos időközönként (beállításfüggő).
 
-### Telepítés Firefox esetén
-
-(Hamarosan megírom ezt a részt.)
+<img hspace="10" src="http://img.shields.io/badge/chrome-m%C5%B1k%C3%B6dik-brightgreen.svg" />
+<img hspace="10" src="http://img.shields.io/badge/firefox-hib%C3%A1k-red.svg" />
 
 
 
@@ -108,7 +105,7 @@ A szkript egész egyszerűen le fogja cserélni a GyakoriKérdések főoldalát,
 
 
 
-## Hogyan törölhetem?
+## Hogyan törölheted?
 
 Ha nincs más felhasználói szkripted, akkor a *GreaseMonkey*/*TamperMonkey* bővítmény eltávolításával ez a szkript is megszűnik tevékenykedni a böngésződben. Ha a bővítményt megtartanád, csak a szkriptemet törölnéd, olvass tovább:
 
@@ -121,16 +118,18 @@ Ha nincs más felhasználói szkripted, akkor a *GreaseMonkey*/*TamperMonkey* b�
 
 ### Törlés Firefox esetén
 
-(Hamarosan megírom ezt a részt.)
-
-
-
-## Milyen környezetben teszteltem?
-
-Egyelőre csak a legfrissebb Chrome böngészővel.
+1. A főmenüből válaszd a Kiegészítők lehetőséget, vagy navigálj az [about:addons](about:addons) címre
+2. Válaszd ki bal oldalon a User Scripts fület
+3. A kiegészítő sorában jobb oldalon válaszd az Eltávolítás lehetőséget.
 
 
 
 ## Fejlesztőknek!
 
 A repóba felraktam egy [gyk-kategoriak.json](gyk-kategoriak.json) nevű fájlt, ami beszédes nevéhez hűen a GyakoriKérdések kategóriáit és alkategóriáit rejti gyönyörűséges JSON formában. Az adathalmaz tartalmazza a linkeket és a kategóriák neveit is. Ha kedvet kaptál egy saját tuningoló szkripthez, akkor talán jól jöhet. :)
+
+
+
+## Észrevételek
+
+Ha bárkinek bármilyen észrevétele, ötlete támadna, szívesen fogadom. A [blogomon](http://juzraai.blogspot.hu/) található egy kontakt form (alul) ott tudtok nekem írni, illetve hamarosan egy bejegyzést is csinálok a szkripthez, oda is lehet majd kommentelni.
