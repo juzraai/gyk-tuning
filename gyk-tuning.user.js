@@ -8,17 +8,16 @@
 // @require       http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js
 // @resource      catlist https://github.com/juzraai/gyk-tuning/raw/master/gyk-kategoriak.json
 // @downloadURL   https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.user.js
-// @updateURL     https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.user.js
+// @updateURL    https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.user.js
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
 // @grant         GM_xmlhttpRequest
-// @version       1.0.20140726.0106
+// @version       1.0.20140726.2358
 // ==/UserScript==
 
 var cssURL = "https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.less";
 
 // TODO
-// - answer list
 // - topic list pagers
 
 
@@ -32,6 +31,8 @@ var cssURL = "https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.less";
 //throw new Error("Stopped JavaScript.");
 
 
+
+// AJAX + böngésző állapot változatás: http://stackoverflow.com/questions/824349/modify-the-url-without-reloading-the-page
 
 /* TODO
 	kellenének vissza gombok
@@ -67,14 +68,16 @@ init();
 
 function updateCategoryNavigator(href, trigger) {
 	var cat0 = href.split('__')[0];
-	$('#cat0').val(cat0);
+	$('#category').val(cat0);
 	updateCat1(cat0, false);
-	$('#cat1').val(href);
-	if (trigger) $('#cat1').trigger('change');
+	$('#subcategory').val(href);
+	if (trigger) $('#subcategory').trigger('change');
 }
 
 function showTopicList(doc) {
 	$('#main').fadeOut('fast', function() {
+		//$("html, body").scrollTop(0);
+		$("html, body").animate({scrollTop: 0}, 'slow');
 		$('#main').html('<table id="topic-list"></table>');
 
 		var t = $("table.small.width100 ~ table.kerdes_lista, div.center ~ table.kerdes_lista", doc).first();
@@ -107,6 +110,8 @@ function showTopicList(doc) {
 			topicLink($(this).attr('href'));
 		});
 
+		// pager links: $('table.small.width100 a[href*="oldal"]');
+
 		$('#main').fadeIn('fast');
 	});
 } // showTopicList()
@@ -123,48 +128,130 @@ function nick(doc) {
 	}
 }
 
+function getNickLinks(nick) {
+ return '\
+		[ <a href="https://www.google.hu/search?q=site%3Agyakorikerdesek.hu%20%22'+encodeURI(nick)+'%20nev%C5%B1%20felhaszn%C3%A1l%C3%B3%20k%C3%A9rd%C3%A9se%22" target="_blank">kérdései</a> ]\
+		[ <a href="https://www.google.hu/search?q=site%3Agyakorikerdesek.hu%20%22'+encodeURI(nick)+'%20nev%C5%B1%20felhaszn%C3%A1l%C3%B3%20v%C3%A1lasza%22" target="_blank">válaszai</a> ]\
+	';
+}
+
 function showTopic(doc) {
 	$('#main').fadeOut('fast', function() {
+		//$("html, body").scrollTop(0);
+		$("html, body").animate({scrollTop: 0}, 'slow');
 		$('#main').html('');
 
-		var cat = $("table.width100 td.jobb_oldal a:eq(1)", doc).attr('href'); // undefined...
+		// breadcrumbs
+		var cat = $("table.width100 td.jobb_oldal a:eq(1)", doc).attr('href');
 		updateCategoryNavigator(cat, false);
 
-		var d = $('table.kerdes td:has("h1")', doc);
+		// question box
+		var td = $('table.kerdes td:has("h1")', doc);
 
-		var q = $('h1', d).text();
+		var question = $('h1', td).text();
 
-		var a = $('span.sc0', d);
-		if (a.size() > 0) {
-			a = a.text().replace(" nevű felhasználó kérdése:", '');
-			a = a + ' [ <a href="https://www.google.hu/search?q=site%3Agyakorikerdesek.hu%20%22'+a+'%20nev%C5%B1%20felhaszn%C3%A1l%C3%B3%20k%C3%A9rd%C3%A9se%22" target="_blank">kérdései</a> ]\
-				[ <a href="https://www.google.hu/search?q=site%3Agyakorikerdesek.hu%20%22'+a+'%20nev%C5%B1%20felhaszn%C3%A1l%C3%B3%20v%C3%A1lasza%22" target="_blank">válaszai</a> ]';
+		var nick = $('span.sc0', td);
+		if (nick.size() > 0) {
+			nick = nick.text().replace(" nevű felhasználó kérdése:", '');
+			nick = nick + getNickLinks(nick);
 		} else {
-			a = "<em>(név elrejtve)</em>";
+			nick = "";
 		}
 
-		var t = $('table.statusz_kerdes td.datum', doc).text().trim();
 
-		$('h1, div', d).remove();
-		$('span.sc0', d).remove();
+		var timestamp = $('table.statusz_kerdes td.datum', doc).text().trim();
 
-		$('#main').append('<div id="question"></div>');
-		$('#question').append('<p class="field">Kérdező: <span class="value">'+a+'</span></p>')
-			.append('<p class="field">Kérdés kiírva: <span class="value">'+t+'</span></p>')
-			.append('<p class="field">Kérdés:</p>')
-			.append('<h1>'+q+'</h1>')
-			.append('<p class="field">Leírás:</p>')
-			.append('<p id="description">'+d.html()+'</p>');
+		// strip description
+		$('h1, div, span.sc0', td).remove();
+		var h = td.html().trim();
+		while (h.match(/^<br ?\/?>/gi)) h = h.replace(/^<br ?\/?>/gi, '').trim();
+		while (h.match(/<br ?\/?>$/gi)) h = h.replace(/<br ?\/?>$/gi, '').trim();
+		td.html(h);
+
+		var description = td.html();
+
+		// output
+		$('#main').append('<div id="question" class="op"></div>');
+		$('#question')
+			.append('<div class="nick">'+nick+'</div><div class="timestamp">'+timestamp+'</div>')
+			.append('<h1>'+question+'</h1>')
+			.append('<p>'+description+'</p>');
+
+		// answers
+		$('tr:has(>td.valaszok a[name])', doc).each(function() {
+			var tr1 = $(this);
+			var tr2 = tr1.next();
+
+			var td = $('td:has(a[name])', tr1);
+			var clazz = "";
+			var nick = $('span.sc0', td);
+
+			var p = $('div.right.small', tr1);
+			var userPercentage = "";
+			var answerPercentage = "";
+			if (p.size() > 0) {
+				p = p.text();
+				var pattern = /.*A válaszíró ([\d%]+).*/g;
+				var match = pattern.exec(p);
+				if (match) {
+					userPercentage = match[1];
+				}
+				pattern = /.*A válasz ([\d%]+).*/g;
+				match = pattern.exec(p);
+				if (match) {
+					answerPercentage = match[1];
+				}
+			}
+
+			$('a[name], div, span.sc0', td).remove();
+			var h = td.html().trim();
+			while (h.match(/^<br ?\/?>/gi)) h = h.replace(/^<br ?\/?>/gi, '').trim();
+			while (h.match(/<br ?\/?>$/gi)) h = h.replace(/<br ?\/?>$/gi, '').trim();
+			td.html(h);
+			var answer = td.html();
+
+			var id = $('td.sorszam', tr2).text();
+
+			var timestamp = $('td.datum', tr2).text();
+
+			// output
+			var nicklinks = "";
+			if (nick.size() > 0) {
+				nick = nick.text().replace(" nevű felhasználó válasza:", '');
+				if (nick.match(/A kérdező.*/)) {
+					nick = "Kérdező";
+					clazz = "op";
+				} else {
+					nicklinks = getNickLinks(nick);
+				}
+			} else {
+				nick = "";
+			}
+			if ($('td.ertekelo', tr2).text()=="Ez a te válaszod.") {
+				nick = nick + " (te)";
+				clazz = "my";
+			}
+			if (userPercentage) {
+				if (""==nick) nick = "(név elrejtve)";
+				nick = nick + " [ " + userPercentage + " ]";
+			}
+			nick = nick + nicklinks;
+			if (answerPercentage) {
+				answerPercentage =  " [ " + answerPercentage + " ]";
+			} else {
+				answerPercentage = "";
+			}
+			// answerPercentage +=  rate buttons (-1 +0.5 +1), report button
 
 
-		// válaszok
-		$('td.valaszok:nth-child(2)', doc).each(function(){
-			var b = $(this);
-			var u = $('span.sc0', b).text().replace(" nevű felhasználó válasza:", '');
-			$('span.sc0', b).remove();
-			// ....
-			$('#main').append('<div class="answer"></div>');
+			var cssid = "answer-"+id.replace('# ', '').replace('/', '-');
+			$('#main').append('<div class="answer '+clazz+'" id="'+cssid+'"></div>');
+			$('#'+cssid)
+				.append('<div class="answer-id">'+id+'</div><div class="nick">'+nick+'</div><div class="timestamp">'+timestamp+'</div>')
+				.append('<p>'+answer+'</p>')
+				.append('<div class="ratings">'+answerPercentage+'</div>');
 		});
+
 
 		// alul válasz form!!! - előre beleírhatná, hogy "#1 vagyok", ha lát "Ez a te válaszod" szöveget :)
 		// további lapokat betölti ahogy legörgetünk
@@ -182,8 +269,8 @@ function topicLink(href) {
 }
 
 function updateCat1(cat, trigger) {
-	$('#cat1 option').remove();
-	$('#cat1').append('<option value="'+cat+'">Összes kérdés</option>');
+	$('#subcategory option').remove();
+	$('#subcategory').append('<option value="'+cat+'">Összes kérdés</option>');
 	var f = false;
 	for (i = 0; i < catlist.length; i++) {
 		var item = catlist[i];
@@ -191,7 +278,7 @@ function updateCat1(cat, trigger) {
 			if (item.sub) {
 				f = true;
 				item.sub.map(function(subitem){
-					$('#cat1').append('<option value="'+subitem.href+'">'+subitem.text+'</option>');
+					$('#subcategory').append('<option value="'+subitem.href+'">'+subitem.text+'</option>');
 				});
 			}
 			break;
@@ -199,9 +286,9 @@ function updateCat1(cat, trigger) {
 	}
 
 	if (f) {
-		$('#cat1block').fadeIn();
+		$('#subcategory-block').fadeIn();
 	} else {
-		$('#cat1block').fadeOut();
+		$('#subcategory-block').fadeOut();
 	}
 
 	if (f || cat=="/kerdeseid") {
@@ -210,23 +297,23 @@ function updateCat1(cat, trigger) {
 		$('#noansblock').fadeOut();
 	}
 
-	if (trigger) $('#cat1').val(cat).trigger('change');
+	if (trigger) $('#subcategory').val(cat).trigger('change');
 }
 
 function init() {
 	// initialize cat0
 	catlist.map(function(item) {
-		$('#cat0').append('<option value="'+item.href+'">'+item.text+'</option>');
+		$('#category').append('<option value="'+item.href+'">'+item.text+'</option>');
 	});
 
 	// cat0 change event
-	$('#cat0').change(function() {
+	$('#category').change(function() {
 		updateCat1(this.value, true);
 	});
 
 	// cat1
-	$('#cat1').change(function() {
-		var href = $('#cat1').val();
+	$('#subcategory').change(function() {
+		var href = $('#subcategory').val();
 		if ($('#noans').is(':checked')) {
 			href = href + "__valasz-nelkul";
 		}
@@ -241,17 +328,17 @@ function init() {
 		a[href="/figyelt-kerdeseid"], \
 		a[href="/figyelt-kulcsszavak"]').click(function(event){
 			event.preventDefault();
-			$('#cat0').val($(this).attr('href')).trigger('change');
+			$('#category').val($(this).attr('href')).trigger('change');
 		});
 
 	// noans
 	$('#noans').change(function() {
-		$('#cat1').trigger('change');
+		$('#subcategory').trigger('change');
 	});
 
 	// refresh
 	$('#refresh').click(function(){
-		$('#cat1').trigger('change');
+		$('#subcategory').trigger('change');
 	});
 
 	// ---
@@ -259,7 +346,7 @@ function init() {
 	nick(document);
 
 	// load page - first in JSON
-	$('#cat0').trigger('change');
+	$('#category').trigger('change');
 	// with updateCategoryNavigator(href, true) we can load any of them
 }
 
@@ -292,10 +379,10 @@ function newBody() {
 				<ul class="float-left">\
 					<li><a href="javascript:void(0)" id="refresh">Frissítés</a></li>\
 					<li>\
-						<select id="cat0"></select>\
-						<span id="cat1block">\
+						<select id="category"></select>\
+						<span id="subcategory-block">\
 							&raquo;\
-							<select id="cat1"></select>\
+							<select id="subcategory"></select>\
 						</span>\
 					</li>\
 					<li id="noansblock"><input type="checkbox" id="noans" />Válasz nélküliek</li>\

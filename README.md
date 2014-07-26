@@ -37,12 +37,13 @@ Egyelőre nem sok mindent, de a cucc **fejlesztés alatt** van! :)
 * a topik lista design-ját részben a [prog.hu](http://prog.hu) ihlette, az első oszlopban kiemelve látható a válaszok száma
 * meg tudja jeleníteni topik listákat, egyelőre lapozólinkek és rendezés nélkül
 * működnek a kategória linkek mindenhonnan
-* megjeleníti a kérdéseket (válaszokat még nem)
+* megjeleníti a kérdéseket és válaszaikat, egyelőre lapozólinkek nélkül
 
 ### Plusz funkciók
 
 * az összes kategória és alkategória elérhető a menüből, akárhol is vagy + egyúttal ezek a vezérlők azt is mutatják, éppen milyen listát nézel
-* a topikok megjelenítésekor, ha ismert a kérdező nick-je, akkor megjelenít Google keresési linkeket a kérdező összes kérdéséhez és válaszához (pl. `site:gyakorikerdesek.hu "xyz nevű felhasználó kérdése"`)
+* a topikok megjelenítésekor, ha ismert a kérdező/válaszoló nick-je, akkor megjelenít Google keresési linkeket az illető összes kérdéséhez és válaszához (pl. `site:gyakorikerdesek.hu "xyz nevű felhasználó kérdése"`)
+* színezi a válaszokat az írójuk szerint: kérdező (zöld), te (kék), mindenki más (szürke)
 
 
 ## Mit fog tudni még?
