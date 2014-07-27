@@ -6,7 +6,7 @@ This is an UserScript for improving a Hungarian Q&A site's UI, so the readme wil
 
 <img hspace="10" src="http://img.shields.io/badge/fejleszt%C3%A9s-alatt%20%3A%29-orange.svg" />
 <img hspace="10" src="http://img.shields.io/badge/chrome-m%C5%B1k%C3%B6dik-brightgreen.svg" />
-<img hspace="10" src="http://img.shields.io/badge/firefox-hib%C3%A1k-red.svg" />
+<img hspace="10" src="http://img.shields.io/badge/firefox-m%C5%B1k%C3%B6dik-brightgreen.svg" />
 
 **Tartalom**
 
@@ -84,12 +84,9 @@ Telepítés lépései:
 
 	`https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.user.js`
 
-2. A megnyíló ablakban/lapon válaszd a Telepítés/Install lehetőséget
+2. A GM/TM ekkor megnyit egy ablakot/lapot, itt válaszd a Telepítés/Install lehetőséget
 
-A GM/TM automatikusan frissíteni fogja a szkriptet bizonyos időközönként (beállításfüggő).
-
-<img hspace="10" src="http://img.shields.io/badge/chrome-m%C5%B1k%C3%B6dik-brightgreen.svg" />
-<img hspace="10" src="http://img.shields.io/badge/firefox-hib%C3%A1k-red.svg" />
+A GM/TM automatikusan frissíteni fogja a szkriptet bizonyos időközönként (beállításfüggő). Manuális frissítéshez elegendő a fenti lépéseket megismételni, TM esetén a gomb felirata Reinstall lesz.
 
 
 

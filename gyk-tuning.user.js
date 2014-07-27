@@ -8,44 +8,24 @@
 // @require       http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js
 // @resource      catlist https://github.com/juzraai/gyk-tuning/raw/master/gyk-kategoriak.json
 // @downloadURL   https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.user.js
-// @updateURL    https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.user.js
+// @updateURL     https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.user.js
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
 // @grant         GM_xmlhttpRequest
-// @version       1.0.20140726.2358
+// @version       1.0.20140727.2243
 // ==/UserScript==
+if (window.top != window.self) return;
 
 var cssURL = "https://github.com/juzraai/gyk-tuning/raw/master/gyk-tuning.less";
 
 // TODO
+// - load answers automatically
 // - topic list pagers
-
-
-
-//$('div#img_fejlec').append('\
-//	<div style="width:100%;background-color:#000;color:#CCC;font-family:Segoe UI,Arial,sans-serif;">\
-//		A GyakoriKérdések UI v2.0 telepítve van, csak ki van kapcsolva ;) [ Kapcsold be itt! ]\
-//	</div>\
-//	');
-//
-//throw new Error("Stopped JavaScript.");
-
-
-
-// AJAX + böngésző állapot változatás: http://stackoverflow.com/questions/824349/modify-the-url-without-reloading-the-page
-
-/* TODO
-	kellenének vissza gombok
-
-	később lehetne olyat, hogy minden linkre egyetlen click handlert,
-	ami felismeri, milyen linkről van szó, és az alapján hívja a megfelelő függvényt
-
-	ez azért kéne, hogy később bármelyik aloldalról lehessen használni és az adott URL alapján dolgozzon
-*/
-
+// - load menus from JSON. separate list for signedin/signedout states
 
 // build up category list
 var catlist = $.parseJSON(GM_getResourceText("catlist"));
+console.debug('JSON loaded.');
 
 // hide original site
 $('#container').hide();
@@ -57,6 +37,7 @@ $('head link').remove();
 $('head').append('<link id="less" rel="stylesheet/less" type="text/css" href="'+cssURL+'" />');
 less.sheets.push($('link#less')[0]);
 less.refresh();
+console.debug('LESS loaded.');
 
 // add new body
 newBody();
@@ -148,6 +129,7 @@ function showTopic(doc) {
 		// question box
 		var td = $('table.kerdes td:has("h1")', doc);
 
+		// get data
 		var question = $('h1', td).text();
 
 		var nick = $('span.sc0', td);
@@ -158,10 +140,8 @@ function showTopic(doc) {
 			nick = "";
 		}
 
-
 		var timestamp = $('table.statusz_kerdes td.datum', doc).text().trim();
 
-		// strip description
 		$('h1, div, span.sc0', td).remove();
 		var h = td.html().trim();
 		while (h.match(/^<br ?\/?>/gi)) h = h.replace(/^<br ?\/?>/gi, '').trim();
@@ -182,6 +162,7 @@ function showTopic(doc) {
 			var tr1 = $(this);
 			var tr2 = tr1.next();
 
+			// get data
 			var td = $('td:has(a[name])', tr1);
 			var clazz = "";
 			var nick = $('span.sc0', td);
@@ -243,7 +224,6 @@ function showTopic(doc) {
 			}
 			// answerPercentage +=  rate buttons (-1 +0.5 +1), report button
 
-
 			var cssid = "answer-"+id.replace('# ', '').replace('/', '-');
 			$('#main').append('<div class="answer '+clazz+'" id="'+cssid+'"></div>');
 			$('#'+cssid)
@@ -277,9 +257,10 @@ function updateCat1(cat, trigger) {
 		if (item.href == cat) {
 			if (item.sub) {
 				f = true;
-				item.sub.map(function(subitem){
+				for(j = 0; j < item.sub.length; j++) {
+					subitem = item.sub[j];
 					$('#subcategory').append('<option value="'+subitem.href+'">'+subitem.text+'</option>');
-				});
+				}
 			}
 			break;
 		}
@@ -301,10 +282,15 @@ function updateCat1(cat, trigger) {
 }
 
 function init() {
+	console.debug('init()');
+
 	// initialize cat0
-	catlist.map(function(item) {
+	console.debug('catlist = '+catlist);
+	for(i = 0; i < catlist.length; i++) {
+		item = catlist[i];
 		$('#category').append('<option value="'+item.href+'">'+item.text+'</option>');
-	});
+	}
+	console.debug('Categories injected.');
 
 	// cat0 change event
 	$('#category').change(function() {
