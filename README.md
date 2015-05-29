@@ -125,6 +125,7 @@ Ha nincs más felhasználói szkripted, akkor a *GreaseMonkey*/*TamperMonkey* b�
 
 A repóba felraktam egy [gyk-kategoriak.json](gyk-kategoriak.json) nevű fájlt, ami beszédes nevéhez hűen a GyakoriKérdések kategóriáit és alkategóriáit rejti gyönyörűséges JSON formában. Az adathalmaz tartalmazza a linkeket és a kategóriák neveit is. Ha kedvet kaptál egy saját tuningoló szkripthez, akkor talán jól jöhet. :)
 
+A 2015-ös új kategóriák aktualizálásáért köszönet [neki a GYK-ról](http://www.gyakorikerdesek.hu/szamitastechnika__programozas__6897393-egy-ilyen-custom-gyakori-sitemap-bovitmenyt-chrome-hoz-hogy-lehetne-megirni)!
 
 
 ## Észrevételek

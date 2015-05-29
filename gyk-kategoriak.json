@@ -82,18 +82,6 @@
 				"text": "Családfa"
 			},
 			{
-				"href": "/csaladi-kapcsolatok__eljegyzes",
-				"text": "Eljegyzés"
-			},
-			{
-				"href": "/csaladi-kapcsolatok__eskuvo",
-				"text": "Esküvő"
-			},
-			{
-				"href": "/csaladi-kapcsolatok__hazassag",
-				"text": "Házasság"
-			},
-			{
 				"href": "/csaladi-kapcsolatok__nagyszulok",
 				"text": "Nagyszülők"
 			},
@@ -108,10 +96,6 @@
 			{
 				"href": "/csaladi-kapcsolatok__testveri-kapcsolat",
 				"text": "Testvéri kapcsolat"
-			},
-			{
-				"href": "/csaladi-kapcsolatok__valas",
-				"text": "Válás"
 			},
 			{
 				"href": "/csaladi-kapcsolatok__egyeb-kerdesek",
@@ -349,6 +333,60 @@
 			},
 			{
 				"href": "/ezoteria__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/felnott-parkapcsolatok",
+		"text": "Felnőtt párkapcsolatok",
+		"sub": [
+			{
+				"href": "/felnott-parkapcsolatok__randizas",
+				"text": "Randizás"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__szerelem",
+				"text": "Álomfejtés"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__tarskeresesi-problemak",
+				"text": "Társkeresési problémák"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__egyutteles",
+				"text": "Együttélés"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__eljegyzes",
+				"text": "Eljegyzés"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__eskuvo",
+				"text": "Esküvő"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__hazassag",
+				"text": "Házasság"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__parkapcsolati-problemak",
+				"text": "Párkapcsolati problémák"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__szakitas",
+				"text": "Szakítás"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__valas",
+				"text": "Válás"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__megcsalas",
+				"text": "Megcsalás"
+			},
+			{
+				"href": "/felnott-parkapcsolatok__egyeb-kerdesek",
 				"text": "Egyéb kérdések"
 			}
 		]
@@ -794,35 +832,31 @@
 		]
 	},
 	{
-		"href": "/szerelem-szex",
-		"text": "Szerelem, szex",
+		"href": "/szexualitas",
+		"text": "Szexualitás",
 		"sub": [
 			{
-				"href": "/szerelem-szex__fogamzasgatlas",
+				"href": "/szexualitas__fogamzasgatlas",
 				"text": "Fogamzásgátlás"
 			},
 			{
-				"href": "/szerelem-szex__ismerkedes",
-				"text": "Ismerkedés"
+				"href": "/szexualitas__heteroszexualitas",
+				"text": "Heteroszexualitás"
 			},
 			{
-				"href": "/szerelem-szex__parkapcsolatok",
-				"text": "Párkapcsolatok"
+				"href": "/szexualitas__biszexualitas",
+				"text": "Biszexualitás"
 			},
 			{
-				"href": "/szerelem-szex__randizas",
-				"text": "Randizás"
+				"href": "/szexualitas__homoszexualitas",
+				"text": "Homoszexialitás"
 			},
 			{
-				"href": "/szerelem-szex__szexualitas",
-				"text": "Szexualitás"
+				"href": "/szexualitas__leszbikussag",
+				"text": "Leszbikusság"
 			},
 			{
-				"href": "/szerelem-szex__szuzesseg",
-				"text": "Szüzesség"
-			},
-			{
-				"href": "/szerelem-szex__egyeb-kerdesek",
+				"href": "/szexualitas__egyeb-kerdesek",
 				"text": "Egyéb kérdések"
 			}
 		]
@@ -857,6 +891,32 @@
 			},
 			{
 				"href": "/szorakozas__egyeb-kerdesek",
+				"text": "Egyéb kérdések"
+			}
+		]
+	},
+	{
+		"href": "/tini-parkapcsolatok",
+		"text": "Tini párkapcsolatok",
+		"sub": [
+			{
+				"href": "/tini-parkapcsolatok__szerelem",
+				"text": "Szerelem"
+			},
+			{
+				"href": "/tini-parkapcsolatok__randizas",
+				"text": "Randizás"
+			},
+			{
+				"href": "/tini-parkapcsolatok__tarskeresesi-problemak",
+				"text": "Társkeresési problémák"
+			},
+			{
+				"href": "/tini-parkapcsolatok__parkapcsolatok",
+				"text": "Párkapcsolatok"
+			},
+			{
+				"href": "/tini-parkapcsolatok__egyeb-kerdesek",
 				"text": "Egyéb kérdések"
 			}
 		]
